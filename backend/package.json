@@ -9,12 +9,17 @@
     "backend"
   ],
   "author": "kshitij",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.2"
   }
 }
