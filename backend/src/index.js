@@ -3,6 +3,7 @@ import "dotenv/config.js";
 import { connectDB } from "./config/db.js";
 import urlRoutes from "./routes/url.route.js";
 import redirectRoutes from "./routes/redirectRoutes.js";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -12,6 +13,8 @@ const PORT = process.env.PORT || 8000;
     await connectDB();
 
     app.use(express.json());
+
+    app.use(cors());
 
     app.use("/api/urls", urlRoutes);
 
